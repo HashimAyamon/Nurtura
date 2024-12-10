@@ -2,20 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer compoment{
+    .header_top__icon_wraper{
+        @apply bg-gray-200 rounded-md p-[6px] text-[14px] cursor-pointer hover:bg-accent 
+        hover:text-white;
+    }
 }
