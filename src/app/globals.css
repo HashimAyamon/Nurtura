@@ -2,11 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-@layer compoment{
-    .header_top__icon_wraper{
-        @apply bg-gray-200 rounded-md p-[6px] text-[14px] cursor-pointer hover:bg-accent 
+@layer compoment {
+  .header_top__icon_wraper {
+    @apply bg-gray-200 rounded-md p-[6px] text-[14px] cursor-pointer hover:bg-accent 
         hover:text-white;
-    }
+  }
+
+  .navbar__link:hover {
+    color: darksalmon;
+    transform: all 0.4s;
+  }
+  .navbar__link::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(234, 169, 236);
+    height: 4px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    scale: 0;
+    transform-origin: left;
+    transform: all 0.4s;
+  }
+  .navbar__link:hover::after{
+     scale :1;
+  }
 }
