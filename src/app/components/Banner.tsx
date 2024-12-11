@@ -1,5 +1,5 @@
 "use client";  
-
+import { FaArrowRight,FaArrowLeft } from "react-icons/fa";
 import React, { useState, useEffect } from 'react';
 
 const Banner = () => {
@@ -28,12 +28,12 @@ const Banner = () => {
         <button
           onClick={() => setCurrentImage((prev) => (prev - 1 + images.length) % images.length)}
         >
-          Prev
+          <FaArrowLeft />
         </button>
         <button
           onClick={() => setCurrentImage((prev) => (prev + 1) % images.length)}
         >
-          Next
+          <FaArrowRight />
         </button>
       </div>
     </div>

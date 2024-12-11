@@ -3,9 +3,10 @@ import Link from "next/link";
 
 const MainNav = () => {
   return (
-    <div className="hidden lg:block">
+    <div>
+      <br />
       <div className="container">
-        <div className="flex w-fit gap-10 mx-auto font-medium py-4 text-blackish">
+        <div className=" flex w-fit gap-11 mx-auto font-medium py-4 text-blackish">
           <Link className="navbar__link relative " href="/">
             HOME
           </Link>
@@ -13,10 +14,10 @@ const MainNav = () => {
             Blog
           </Link>
           <Link className="navbar__link relative " href="/about-us">
-            AboutUS
+            AboutUs
           </Link>
           <Link className="navbar__link relative " href="/contact-us">
-            Contact Us
+            ContactUs
           </Link>
         </div>
       </div>

@@ -61,9 +61,6 @@ const ProductCard: React.FC<propsType> = ({
           <span className="text-xl font-bold text-accent">${price.toFixed(2)}</span>
           <del className="text-gray-500 text-sm">${(price + 99).toFixed(2)}</del>
         </div>
-        <button className="mt-2 w-full bg-accent text-white py-2 rounded-md font-medium hover:bg-accent-dark transition-all">
-          View Detals
-        </button>
       </div>
     </div>
   );

@@ -21,17 +21,17 @@ const AboutUs = () => {
           <div className="team-members">
             <div className="team-member">
               <img src="/dev1.jpg" alt="Team Member 1" className="team-img" />
-              <h3>John Doe</h3>
+              <h3>Hashim</h3>
               <p>CEO & Founder</p>
             </div>
             <div className="team-member">
               <img src="/dev2.jpg" alt="Team Member 2" className="team-img" />
-              <h3>Jane Smith</h3>
-              <p>Lead Developer</p>
+              <h3>Hashim</h3>
+              <p> Developer</p>
             </div>
             <div className="team-member">
               <img src="/dev3.jpg" alt="Team Member 3" className="team-img" />
-              <h3>Sarah Lee</h3>
+              <h3>Hashim</h3>
               <p>UX/UI Designer</p>
             </div>
           </div>
