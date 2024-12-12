@@ -16,7 +16,6 @@ const Contact = () => {
           Have questions or need assistance? We’re here to help! Reach out to us using the contact details or the form below.
         </p>
 
-        {/* Contact Information Section */}
         <div className="contact-info-section">
           <div className="contact-info">
             <h2>Contact Info</h2>
@@ -26,8 +25,8 @@ const Contact = () => {
           </div>
           <div className="social-media">
             <h2>Follow Us</h2>
-            <a href="#" className="social-link">GitHub</a>
-            <a href="#" className="social-link">LinkedIn</a>
+            <a href="https://github.com/HashimAyamon" className="social-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/hashim-a-139a00269/" className="social-link">LinkedIn</a>
             <a href="#" className="social-link">Instagram</a>
           </div>
         </div>
@@ -47,6 +46,8 @@ const Contact = () => {
 
         
       </div>
+     
+
     </div>
   );
 };

@@ -51,7 +51,7 @@ const NavBar = () => {
             <div className="header_top__icon_wraper">
               <FaGithub />
             </div>
-            <div className="header_top__icon_wraper">
+            <div className="header_top__icon_wraper" >
               <FaLinkedin />
             </div>
             <div className="header_top__icon_wraper">
@@ -60,7 +60,7 @@ const NavBar = () => {
           </div>
 
        
-          <div className="text-gray-500 text-[12px]">
+          <div className="text-gray-500 text-[15px]">
             <b>FREE DELIVERY</b> IN THIS WEEK OVER 999
           </div>
 

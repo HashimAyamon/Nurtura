@@ -1,5 +1,6 @@
 import Banner from "@/app/components/Banner";
 import NewProduct from "@/app/components/NewProduct";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Banner/>
       <NewProduct/>
+      <Footer/>
     </main>
    
   );
