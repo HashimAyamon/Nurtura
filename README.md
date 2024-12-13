@@ -1,3 +1,5 @@
+NURTURA A website for women and children, developed using Next.js. This project provides essential information, resources, and services to support the health and well-being of women and children.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
