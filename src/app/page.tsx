@@ -1,6 +1,7 @@
 import Banner from "@/app/components/Banner";
 import NewProduct from "@/app/components/NewProduct";
 import Footer from "./components/Footer";
+import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
     <main>
       <Banner/>
       <NewProduct/>
+      <Testimonial/>
       <Footer/>
     </main>
    

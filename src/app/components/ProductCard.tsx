@@ -23,7 +23,7 @@ const ProductCard: React.FC<propsType> = ({
     const emptyStars = 5 - Math.ceil(rating);
 
     return (
-      <div className="flex items-center gap-1 text-[20px] text-[#FF9529]">
+      <div className="flex items-center gap-1 text-[20px] text-[#FF9529] ">
         {[...Array(fullStars)].map((_, i) => (
           <AiFillStar key={`full-${i}`} />
         ))}

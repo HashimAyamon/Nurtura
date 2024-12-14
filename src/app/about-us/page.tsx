@@ -14,8 +14,8 @@ const AboutUs = () => {
       <div className="about-content">
         <h1 className="about-heading">About Us</h1>
         <p className="about-description">
-          We are a passionate and dedicated team committed to delivering innovative and high-quality solutions. 
-          Our mission is to create impactful services and products that make a difference in the world.
+        We are dedicated to empowering women and ensuring the health and well-being of  <br />children through accessible and reliable healthcare
+        information and services. <br /> Or mission is to bridge the gap between quality healthcare and the people who need it most.
         </p>
         <div className="team-section">
           <h2 className="team-heading">Meet Our Team</h2>

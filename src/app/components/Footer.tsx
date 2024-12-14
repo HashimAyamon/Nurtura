@@ -88,7 +88,11 @@ const Footer = () => {
 
         <div className="mt-12 text-center border-t border-white pt-6">
           <p className="text-sm font-light opacity-80">
-            © {new Date().getFullYear()} Nurtura. All Rights Reserved.
+          
+            {/* © {new Date().getFullYear()} Nurtura. All Rights Reserved.
+             */}
+             © {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })} Nurtura. All Rights Reserved.
+
           </p>
         </div>
       </div>
