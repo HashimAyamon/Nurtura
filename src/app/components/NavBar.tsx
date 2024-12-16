@@ -60,8 +60,8 @@ const NavBar = () => {
           </div>
 
        
-          <div className="text-gray-500 text-[15px]">
-            <b>FREE DELIVERY</b> IN THIS WEEK OVER 999
+          <div className="text-gray-500 text-[20px]">
+            <b>FREE DELIVERY</b> IN THIS WEEK OVER ₹999
           </div>
 
         

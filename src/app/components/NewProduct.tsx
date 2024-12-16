@@ -63,7 +63,7 @@ const NewProduct = () => {
   return (
     <div>
       <div className="container pt-6">
-        <h2 className="mb-9 ml-14 font-bold text-7xl pb-4 text-pink-500"><hr /><br />Upcoming Release</h2>
+        <h2 className="mb-9 ml-14 font-bold text-7xl pb-4 text-pink-500"><hr /><br />Our Products</h2>
         <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-x-20 xl:gap-y-10">
           {productsData.map((item, index) => (
             <ProductCard

@@ -53,15 +53,19 @@ const ProductCard: React.FC<propsType> = ({
         />
       </div>
 
-      <div className="flex flex-col justify-between flex-grow py-4 space-y-3">
-        <h2 className="text-lg font-semibold uppercase text-gray-800 text-center">{title}</h2>
-        <p className="text-sm text-gray-600 text-center">{desc}</p>
-        <div className="flex items-center justify-center">{generatedRating(rating)}</div>
-        <div className="flex items-center justify-center gap-2">
-          <span className="text-xl font-bold text-accent">${price.toFixed(2)}</span>
-          <del className="text-gray-500 text-sm">${(price + 99).toFixed(2)}</del>
-        </div>
-      </div>
+      <div className="flex flex-col justify-between flex-grow py-4 space-y-3 bg-white rounded-lg shadow-md p-4">
+  <h2 className="text-lg font-semibold uppercase text-gray-800 text-center">{title}</h2>
+  <p className="text-sm text-gray-600 text-center">{desc}</p>
+  <div className="flex items-center justify-center">{generatedRating(rating)}</div>
+  <div className="flex items-center justify-center gap-4">
+    <span className="text-xl font-bold text-accent">₹{price.toFixed(2)}</span>
+    <del className="text-gray-500 text-sm">₹{(price + 99).toFixed(2)}</del>
+  </div>
+  <button className="bg-pink-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md hover:shadow-lg transition-all duration-300">
+    View Details
+  </button>
+</div>
+
     </div>
   );
 };
