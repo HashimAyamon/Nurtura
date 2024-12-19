@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import Link from "next/link";
 
 interface propsType {
   img: string;
@@ -8,6 +9,7 @@ interface propsType {
   desc: string;
   rating: number;
   price: number;
+  id: string; // Add id prop
 }
 
 const ProductCard: React.FC<propsType> = ({
@@ -16,23 +18,17 @@ const ProductCard: React.FC<propsType> = ({
   desc,
   rating,
   price,
+  id,
 }) => {
   const generatedRating = (rating: number) => {
     const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-    const emptyStars = 5 - Math.ceil(rating);
+    const emptyStars = 5 - fullStars;
 
     return (
-      <div className="flex items-center gap-1 text-[20px] text-[#FF9529] ">
+      <div className="flex items-center gap-1 text-[20px] text-[#FF9529]">
         {[...Array(fullStars)].map((_, i) => (
           <AiFillStar key={`full-${i}`} />
         ))}
-        {hasHalfStar && (
-          <div className="relative w-[20px] h-[20px]">
-            <AiFillStar className="absolute text-[#FF9529]" />
-            <AiOutlineStar className="absolute text-[#FF9529] clip-half" />
-          </div>
-        )}
         {[...Array(emptyStars)].map((_, i) => (
           <AiOutlineStar key={`empty-${i}`} />
         ))}
@@ -42,7 +38,7 @@ const ProductCard: React.FC<propsType> = ({
   };
 
   return (
-    <div className="ml-32 p-4 border border-gray-200 rounded-xl w-[300px] h-[450px] shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out bg-white flex flex-col">
+    <div className="p-4 border border-gray-200 rounded-xl w-[300px] h-[450px] shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out bg-white flex flex-col">
       <div className="relative h-48 w-full overflow-hidden rounded-md">
         <Image
           className="object-cover"
@@ -53,19 +49,20 @@ const ProductCard: React.FC<propsType> = ({
         />
       </div>
 
-      <div className="flex flex-col justify-between flex-grow py-4 space-y-3 bg-white rounded-lg shadow-md p-4">
-  <h2 className="text-lg font-semibold uppercase text-gray-800 text-center">{title}</h2>
-  <p className="text-sm text-gray-600 text-center">{desc}</p>
-  <div className="flex items-center justify-center">{generatedRating(rating)}</div>
-  <div className="flex items-center justify-center gap-4">
-    <span className="text-xl font-bold text-accent">₹{price.toFixed(2)}</span>
-    <del className="text-gray-500 text-sm">₹{(price + 99).toFixed(2)}</del>
-  </div>
-  <button className="bg-pink-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md hover:shadow-lg transition-all duration-300">
-    View Details
-  </button>
-</div>
-
+      <div className="flex flex-col justify-between flex-grow py-4 space-y-3">
+        <h2 className="text-lg font-semibold uppercase text-gray-800 text-center">{title}</h2>
+        <p className="text-sm text-gray-600 text-center">{desc}</p>
+        <div className="flex items-center justify-center">{generatedRating(rating)}</div>
+        <div className="flex items-center justify-center gap-4">
+          <span className="text-xl font-bold text-accent">₹{price.toFixed(2)}</span>
+          <del className="text-gray-500 text-sm">₹{(price + 99).toFixed(2)}</del>
+        </div>
+        <Link href={`/product/${id}`}>
+          <button className="bg-pink-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md hover:shadow-lg transition-all duration-300">
+            View Details
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
