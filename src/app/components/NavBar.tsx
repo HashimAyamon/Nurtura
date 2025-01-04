@@ -15,30 +15,15 @@ const NavBar = () => {
     "United Kingdom",
     "Australia",
     "India",
-    "Germany",
-    "France",
-    "China",
-    "Japan",
-    "Brazil",
   ];
 
-  const languages = [
-    "English",
-    "Spanish",
-    "French",
-    "German",
-    "Chinese",
-    "Japanese",
-    "Hindi",
-    "Portuguese",
-    "Russian",
-  ];
+  const languages = ["English"];
 
-  const handleCountryChange = (event:any) => {
+  const handleCountryChange = (event: any) => {
     setSelectedCountry(event.target.value);
   };
 
-  const handleLanguageChange = (event:any) => {
+  const handleLanguageChange = (event: any) => {
     setSelectedLanguage(event.target.value);
   };
 
@@ -47,26 +32,47 @@ const NavBar = () => {
       <div className="container py-4">
         <div className="flex justify-between items-center">
           {/* Icons */}
+
           <div className="hidden lg:flex gap-1">
             <div className="header_top__icon_wraper">
-              <FaGithub />
+              <a
+                href="https://github.com/HashimAyamon"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-pink-300 transition duration-300"
+              >
+                <FaGithub />
+              </a>
             </div>
-            <div className="header_top__icon_wraper" >
-              <FaLinkedin />
-            </div>
+
             <div className="header_top__icon_wraper">
-              <LuInstagram />
+              <a
+                href="https://www.linkedin.com/in/hashim-a-139a00269/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-pink-300 transition duration-300"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+
+            <div className="header_top__icon_wraper">
+              <a
+                href="https://github.com/HashimAyamon"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-pink-300 transition duration-300"
+              >
+                <LuInstagram />
+              </a>
             </div>
           </div>
 
-       
           <div className="text-gray-500 text-[20px]">
             <b>FREE DELIVERY</b> IN THIS WEEK OVER ₹999
           </div>
 
-        
           <div className="flex gap-4 items-center">
-          
             <div className="country-dropdown">
               <select
                 id="country"
@@ -75,7 +81,7 @@ const NavBar = () => {
                 className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
               >
                 <option value="" disabled>
-                   Select Country 
+                  Select Country
                 </option>
                 {countries.map((country, index) => (
                   <option key={index} value={country}>
@@ -94,7 +100,7 @@ const NavBar = () => {
                 className="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-green-300"
               >
                 <option value="" disabled>
-                   Select Language 
+                  Select Language
                 </option>
                 {languages.map((language, index) => (
                   <option key={index} value={language}>

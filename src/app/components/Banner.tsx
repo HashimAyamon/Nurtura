@@ -10,6 +10,7 @@ const Banner = () => {
     "/banner4.png",
   ];
 
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);

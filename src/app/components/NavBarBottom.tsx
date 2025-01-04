@@ -6,15 +6,12 @@ import { BsSearch } from "react-icons/bs";
 import { FiHeart } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import Image from "next/image";
-import { useRouter } from "next/navigation";  // Use useRouter from next/navigation
+import { useRouter } from "next/navigation";  
 
 const NavBarBottom = () => {
-  const router = useRouter();  // Initialize useRouter
+  const router = useRouter();  
 
-  // Function to navigate to the cart page
-  const goToCart = () => {
-    router.push('/cart');  // Navigate to the cart page
-  };
+ 
 
   return (
     <div className="border-b border-gray-200 py-6">
@@ -48,10 +45,11 @@ const NavBarBottom = () => {
               {/* Notification badge for wishlist */}
             </div>
           </div>
-          <div className="relative" onClick={goToCart}>  {/* Add onClick handler */}
+          <div className="relative" >  
             <HiOutlineShoppingBag />
             <div className="bg-red-600 rounded-full absolute top-0 right-0 w-[18px] h-[18px] text-[12px] text-white grid place-items-center translate-x-1 -translate-y-1">
-              {/* Notification badge for cart */}
+        
+
             </div>
           </div>
         </div>

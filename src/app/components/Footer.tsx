@@ -34,6 +34,7 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
+              
               <li>
                 <Link href="/about-us" className="text-lg hover:text-pink-300 transition duration-300">
                   About Us
@@ -51,7 +52,7 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold mb-6">Follow Us</h3>
             <div className="flex justify-center space-x-6 text-4xl">
               <a
-                href="https://facebook.com"
+                href="https://www.linkedin.com/in/hashim-a-139a00269/"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-pink-300 transition duration-300"
@@ -59,7 +60,7 @@ const Footer = () => {
                 <FaFacebook />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://github.com/HashimAyamon"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-pink-300 transition duration-300"
@@ -67,7 +68,7 @@ const Footer = () => {
                 <FaTwitter />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://github.com/HashimAyamon"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-pink-300 transition duration-300"
@@ -75,7 +76,7 @@ const Footer = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/hashim-a-139a00269/"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-pink-300 transition duration-300"

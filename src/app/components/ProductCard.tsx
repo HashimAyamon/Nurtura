@@ -57,11 +57,7 @@ const ProductCard: React.FC<propsType> = ({
           <span className="text-xl font-bold text-accent">₹{price.toFixed(2)}</span>
           <del className="text-gray-500 text-sm">₹{(price + 99).toFixed(2)}</del>
         </div>
-        <Link href={`/product/${id}`}>
-          <button className="bg-pink-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow-md hover:shadow-lg transition-all duration-300">
-            View Details
-          </button>
-        </Link>
+      
       </div>
     </div>
   );

@@ -24,6 +24,7 @@ const testimonials = [
   },
 ];
 
+
 const Testimonial = () => {
   return (
     <div className="bg-gray-100 py-16">
