@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -13,7 +14,7 @@ const testimonials = [
     name: 'Shuraif',
     feedback: 'A life-changing experience. Exceptional quality and service.',
     image: '/user2.jpg',
-    designation: ' Manager',
+    designation: 'Manager',
   },
   {
     id: 3,
@@ -24,7 +25,6 @@ const testimonials = [
   },
 ];
 
-
 const Testimonial = () => {
   return (
     <div className="bg-gray-100 py-16">
@@ -33,14 +33,16 @@ const Testimonial = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map(({ id, name, feedback, image, designation }) => (
             <div key={id} className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center">
-              <img
+              <Image
                 src={image}
                 alt={name}
-                className="w-24 h-24 rounded-full mb-4 border-4 border-gray-200 object-cover"
+                width={96}  // Image width
+                height={96} // Image height
+                className="rounded-full mb-4 border-4 border-gray-200 object-cover"
               />
               <h3 className="text-xl font-medium text-gray-700">{name}</h3>
               <p className="text-sm text-gray-500 mb-2">{designation}</p>
-              <p className="text-gray-600 italic">"{feedback}"</p>
+              <p className="text-gray-600 italic">&quot;{feedback}&quot;</p>
             </div>
           ))}
         </div>

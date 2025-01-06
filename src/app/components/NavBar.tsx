@@ -6,8 +6,8 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 
 const NavBar = () => {
-  const [selectedCountry, setSelectedCountry] = useState("");
-  const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState<string>("");
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("");
 
   const countries = [
     "United States",
@@ -19,11 +19,12 @@ const NavBar = () => {
 
   const languages = ["English"];
 
-  const handleCountryChange = (event: any) => {
+  // Specify the event type as React.ChangeEvent<HTMLSelectElement>
+  const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCountry(event.target.value);
   };
 
-  const handleLanguageChange = (event: any) => {
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedLanguage(event.target.value);
   };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import type { Metadata } from "next";
+import Image from "next/image"; 
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -37,14 +38,14 @@ const Blog = () => {
       category: "Science",
     },
     {
-        id: 4,
-        title: "AI & ML Intelligence",
-        excerpt:
-          "Every year, predictive AI saves 50 lives in two ERs at UC San Diego Health",
-        image: "/blog4.jpg",
-        date: "Dec 12, 2024",
-        category: "Science",
-      },
+      id: 4,
+      title: "AI & ML Intelligence",
+      excerpt:
+        "Every year, predictive AI saves 50 lives in two ERs at UC San Diego Health",
+      image: "/blog4.jpg",
+      date: "Dec 12, 2024",
+      category: "Science",
+    },
   ];
 
   return (
@@ -56,11 +57,17 @@ const Blog = () => {
         </p>
 
         <div className="blog-main-section">
-          
           <div className="blog-posts">
             {blogPosts.map((post) => (
               <div key={post.id} className="blog-post">
-                <img src={post.image} alt={post.title} className="blog-image" />
+           
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  className="blog-image"
+                  width={600} 
+                  height={400} 
+                />
                 <div className="blog-details">
                   <h3 className="blog-title">{post.title}</h3>
                   <p className="blog-date">{post.date} | {post.category}</p>
@@ -69,7 +76,6 @@ const Blog = () => {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </div>
