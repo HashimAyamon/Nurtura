@@ -1,7 +1,7 @@
 "use client";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";  // Import Image from next/image
+import Image from "next/image";  
 
 const Banner = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -20,19 +20,21 @@ const Banner = () => {
   }, [images.length]);
 
   return (
-    <div className="banner-container">
+    <div className="relative w-full">
       <Image
         src={images[currentImage]}
         alt={`Slide ${currentImage + 1}`}
-        width={1000}  // Set a width
-        height={500}  // Set a height (adjust according to your design)
-        className="object-cover"
+        layout="responsive"  
+        width={1920}  
+        height={600}  
+        className="object-cover w-full h-auto"  
       />
-      <div className="banner-buttons">
+      <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2 px-4">
         <button
           onClick={() =>
             setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
           }
+          className="bg-gray-600 text-white p-2 rounded-full"
         >
           <FaArrowLeft />
         </button>
@@ -40,6 +42,7 @@ const Banner = () => {
           onClick={() =>
             setCurrentImage((prev) => (prev + 1) % images.length)
           }
+          className="bg-gray-600 text-white p-2 rounded-full"
         >
           <FaArrowRight />
         </button>
